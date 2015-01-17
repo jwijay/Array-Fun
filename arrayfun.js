@@ -17,5 +17,15 @@ module.exports = {
     } else {
       return -Infinity;
     }
-  }
+  },
+
+  min: function ( array ) {
+    if (array.length > 0) {
+      return array.reduce(function(a, b) {
+        return a < b? a : b;
+      });  
+    } else {
+      return Infinity;
+    }
+  },
 };
