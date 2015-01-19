@@ -45,9 +45,27 @@ module.exports = {
       }
       return result;
     });
-
     return intersecting;
+  },
+
+  //difference takes in a variable number of arrays, and returns an array of the unique values of the first array, when compared to all following array arguments)
+  difference: function() {
+    var args = Array.prototype.slice.call(arguments);
+
+    var uniqueValuesOfFirst = args.reduce(function(arrayA,arrayB){
+      var result = [];
+      for (var i = 0; i < arrayA.length; i++) {
+        //check if each element is NOT present in arrayB
+        if (arrayB.indexOf(arrayA[i]) === -1) {
+          result.push(arrayA[i]);
+        }
+      }
+      return result;
+    });
+    return uniqueValuesOfFirst;
   }
+
+
 
 };
 
