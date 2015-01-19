@@ -28,4 +28,26 @@ module.exports = {
       return Infinity;
     }
   },
+
+  //http://stackoverflow.com/questions/2141520/javascript-variable-number-of-arguments-to-function
+  //http://www.sitepoint.com/arguments-a-javascript-oddity/
+  intersection: function() {
+    //need to convert the object of a variable num of arrays (arguments) into an array
+    var args = Array.prototype.slice.call(arguments);
+
+    var intersecting = args.reduce(function(arrayA,arrayB) {
+      var result = [];
+      for (var i = 0; i < arrayA.length; i++) {
+        //check if each element is present in arrayB
+        if (arrayB.indexOf(arrayA[i]) > -1) {
+          result.push(arrayA[i]);
+        }
+      }
+      return result;
+    });
+
+    return intersecting;
+  }
+
 };
+

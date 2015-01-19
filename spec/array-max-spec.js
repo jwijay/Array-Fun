@@ -7,14 +7,14 @@ describe("arrayfun", function() {
   });
 
   it("The max() function must return the maximum value", function() {
-      var test_array = [1,2,3,4];
-      var result2 = arrayfun.max( test_array );
-      expect( result2 ).toBe(4);
-    });
+    var test_array = [1,2,3,4];
+    var result2 = arrayfun.max( test_array );
+    expect( result2 ).toBe(4);
+  });
 
   it("The max() function must return -Infinity if the array is empty", function() {
-      var test_array = [];
-      var result2 = arrayfun.max( test_array );
-      expect( result2 ).toBe(-Infinity);
-    });
+    var test_array = [];
+    var result2 = arrayfun.max( test_array );
+    expect( result2 ).toBe(-Infinity);
+  });
 });

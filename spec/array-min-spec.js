@@ -7,14 +7,14 @@ describe("arrayfun", function() {
   });
 
   it("The min() function must return the minimum value", function() {
-      var test_array = [1,2,3,4];
-      var result2 = arrayfun.min( test_array );
-      expect( result2 ).toBe(1);
-    });
+    var test_array = [1,2,3,4];
+    var result2 = arrayfun.min( test_array );
+    expect( result2 ).toBe(1);
+  });
 
   it("The min() function must return -Infinity if the array is empty", function() {
-      var test_array = [];
-      var result2 = arrayfun.min( test_array );
-      expect( result2 ).toBe(Infinity);
-    });
+    var test_array = [];
+    var result2 = arrayfun.min( test_array );
+    expect( result2 ).toBe(Infinity);
+  });
 });
