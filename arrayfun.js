@@ -82,6 +82,10 @@ var arrayFun = {
 
     //at this point, sorting may be necessary (test cases do not sort unique's results)
     return unique;
+  },
+
+  contains: function(array, target) {
+    return (array.indexOf(target) > -1);
   }
 
 };
