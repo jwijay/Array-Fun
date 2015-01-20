@@ -1,4 +1,6 @@
-module.exports = {
+
+
+var arrayFun = {
   first: function( array, n ) {
     //if n is specified, return first n elements
     if (n === undefined) {
@@ -63,9 +65,24 @@ module.exports = {
       return result;
     });
     return uniqueValuesOfFirst;
+  },
+
+  uniq: function() {
+    var unique = [];
+
+    var args = Array.prototype.slice.call(arguments);
+
+    var smushed = args.reduce(function(a,b) {
+      return a.concat(b);
+    });
+
+    unique = smushed.filter(function (value, index, self) { 
+      return self.indexOf(value) === index;
+    });
+
+    //at this point, sorting may be necessary (test cases do not sort unique's results)
+    return unique;
   }
 
-
-
 };
-
+module.exports = arrayFun;
